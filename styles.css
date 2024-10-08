@@ -1,0 +1,213 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #111;
+  color: #fff;
+  scroll-behavior: smooth;
+}
+
+header {
+  background-image: url('imagem-cabecalho.jpg');
+  background-size: contain;
+  background-position: center;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  padding: 20px;
+}
+
+header h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+/* Modificações no nav */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #000;
+  padding: 15px;
+  display: flex;
+  justify-content: space-around; /* Coloca o conteúdo dos lados opostos */
+  align-items: center;
+  z-index: 1000;
+}
+
+nav h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+  margin-left: 10px; /* Espaçamento para o título à esquerda */
+}
+
+nav .nav-links {
+  display: flex;
+  justify-content: flex-end;
+}
+
+nav a {
+  color: #fff;
+  margin: 0 15px;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+nav a:hover {
+  color: #0071e3;
+}
+
+.intro, .differentials, .contact {
+  padding: 80px 20px;
+  text-align: left;
+  background-color: #222;
+}
+
+.intro {
+  text-align: left;
+}
+
+.intro > img {
+  border-radius: 5px;
+  width: 150px;
+  height: auto;
+  margin-bottom: 20px;
+  max-width: 100%;
+}
+
+.services {.services h2 {
+    text-align: center; /* Alinha o título ao centro */
+  }
+
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between; /* Espaçamento entre os itens */
+  align-items: flex-start;
+  padding: 40px;
+  background-color: #222;
+}
+
+.service-item {
+  flex: 1; /* Garante que os itens ocupem o mesmo espaço */
+  margin: 0 10px; /* Espaçamento entre os itens */
+  padding: 20px;
+  background-color: #333;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.service-item h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.service-item p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.differentials {
+  background-image: url('imagem-diferenciais.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 80px 20px;
+  color: #fff;
+}
+
+.differentials-content {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 50px;
+  border-radius: 10px;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.contact {
+  background-color: #333;
+}
+
+.contact-info {
+  margin-top: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+input, textarea {
+  margin-bottom: 20px;
+  padding: 10px;
+  width: 100%;
+  max-width: 400px;
+  font-size: 1rem;
+  background-color: #444;
+  color: #fff;
+  border: 1px solid #555;
+  border-radius: 4px;
+}
+
+button {
+  padding: 12px 24px;
+  font-size: 1rem;
+  background-color: #0071e3;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #005bb5;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #000;
+  color: white;
+}
+
+/* Estilos para dispositivos menores */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  nav a {
+    font-size: 0.9rem;
+  }
+
+  input, textarea {
+    width: 90%;
+  }
+
+  .intro, .differentials, .contact {
+    padding: 40px 10px;
+  }
+
+  .services {
+    flex-direction: column; /* Empilha os itens na vertical em telas pequenas */
+  }
+
+  .service-item {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .service-item img {
+    max-width: 300px;
+  }
+}
